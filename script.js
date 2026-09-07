@@ -1,12 +1,9 @@
-// Function declaration
-function calculatePrice(price, quantity) {
-    return price * quantity;
-}
+// Arrow function
+const calculatePrice = (price, quantity) => price * quantity;
 
-// Function expression
-const getTax = function(amount, taxRate) {
-    return amount * taxRate;
-};
+// Arrow function with implicit return
+const getTax = (amount, taxRate) => amount * taxRate;
+
 
 // Phase 1 tests
 const subtotal = calculatePrice(15, 4);
@@ -26,5 +23,5 @@ function calculateStoreTax(amount) {
 // Console test
 console.log("Store Tax:", calculateStoreTax(100));
 
-// This causes an error because defaultTaxRate is local to calculateStoreTax.
+// This would cause an error because defaultTaxRate is local.
 // console.log(defaultTaxRate);
