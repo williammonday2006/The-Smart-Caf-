@@ -1,0 +1,1 @@
+console.log("Smart Café JavaScript is connected!");
