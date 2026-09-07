@@ -1,7 +1,6 @@
-// Arrow function
+// Arrow functions
 const calculatePrice = (price, quantity) => price * quantity;
 
-// Arrow function with implicit return
 const getTax = (amount, taxRate) => amount * taxRate;
 
 
@@ -20,8 +19,30 @@ function calculateStoreTax(amount) {
     return getTax(amount, defaultTaxRate);
 }
 
-// Console test
 console.log("Store Tax:", calculateStoreTax(100));
 
-// This would cause an error because defaultTaxRate is local.
-// console.log(defaultTaxRate);
+
+// Phase 4
+function applyDiscount(total, discountCallback) {
+    return discountCallback(total);
+}
+
+function studentDiscount(total) {
+    return total * 0.90;
+}
+
+function seniorDiscount(total) {
+    return total * 0.80;
+}
+
+
+// Console tests
+console.log(
+    "Student Discount:",
+    applyDiscount(100, studentDiscount)
+);
+
+console.log(
+    "Senior Discount:",
+    applyDiscount(100, seniorDiscount)
+);
